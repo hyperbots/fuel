@@ -1,0 +1,54 @@
+{
+  "name": "generator-fuel",
+  "description": "Yeoman generator that scaffolds out a front-end web app using Gulp for the build process, Panini for templating, Sass for CSS pre-processing, and Babel for the latest features of Javascript.",
+  "version": "0.0.0",
+  "main": "app/index.js",
+  "repository": "https://github.com/hyperbots/fuel.git",
+  "author": "Adelon Zeta <adelon@hyperbots.co>",
+  "license": "MIT",
+  "scripts": {
+    "test": "nyc mocha ./test/**/*.spec.js",
+    "report": "nyc report --reporter=html",
+    "codecov": "nyc report --reporter=lcov > coverage.lcov && codecov --token=e0142e40-cd4c-436e-b59d-381411850cbb"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "genjutsu",
+    "jutsu",
+    "naruto",
+    "static",
+    "site",
+    "generator",
+    "ninja",
+    "cli",
+    "gulp",
+    "panini",
+    "sass",
+    "babel"
+  ],
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "lodash": "^4.17.4",
+    "parse-git-config": "^1.1.1",
+    "yeoman-generator": "^2.0.1",
+    "yosay": "^2.0.1"
+  },
+  "devDependencies": {
+    "codecov": "^3.0.0",
+    "mocha": "^4.0.1",
+    "nyc": "^11.2.1",
+    "yeoman-assert": "^3.0.0",
+    "yeoman-test": "^1.7.0"
+  },
+  "nyc": {
+    "exclude": [
+      "node_modules"
+    ],
+    "extension": [
+      ".js"
+    ]
+  }
+}
